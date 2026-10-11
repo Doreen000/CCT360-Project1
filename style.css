@@ -1,0 +1,18 @@
+* {
+  font-family: "Loved by the King", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+    text-align:center;
+    padding:10px;
+    background-color: rgb(11,0,91);
+    color: white;
+}
+
+h1 a {
+    text-decoration:none;
+    color:rgb(125, 125, 125);
+    font-size: larger;
+}
