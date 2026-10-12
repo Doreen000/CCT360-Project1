@@ -6,13 +6,85 @@
 
 header {
     text-align:center;
-    padding:10px;
-    background-color: rgb(11,0,91);
+    padding:1px;
+    background-color: black;
     color: white;
 }
 
 h1 a {
     text-decoration:none;
     color:rgb(125, 125, 125);
-    font-size: larger;
+    font-size: 2rem;
+}
+
+/*navigation*/
+nav {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    padding:5px;
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+/*the main viewpoint*/
+.environment-container {
+    text-align: center;
+    padding: 50px;
+    position: relative;
+}
+
+.background-image {
+    width: 800px;
+    border-radius: 20px;
+    border: 2px solid gray;
+    display: block;
+    margin: 0 auto;
+    z-index: 1;  
+}
+
+#portrait {
+    position: absolute;
+    top: 150px;
+    left: 600px;
+    width: 100px;
+    z-index: 2;  
+}
+
+#desk {
+    position: absolute;
+    top: 350px;
+    left: 790px;
+    width: 100px;
+    z-index: 2;  
+}
+
+main {
+    background-color: rgb(15, 6, 87);
+}
+
+/*hint area*/
+.hint-area {
+    background-color: black; 
+    border: 2px solid gray;  
+    border-radius: 20px;
+    padding: 5px;              
+    color: white;
+    margin-top: 20px;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.speaking {
+    text-align: center;
+}
+
+/*footer*/
+footer {
+    background-color: rgb(15, 6, 87);
 }
