@@ -11,10 +11,19 @@ header {
     color: white;
 }
 
-h1 a {
+h1 {
     text-decoration:none;
     color:rgb(125, 125, 125);
+    font-size: 3rem;
+}
+
+h2 {
     font-size: 2rem;
+    color:rgb(125, 125, 125);
+}
+
+p {
+    font-size: 1.5rem;
 }
 
 /*navigation*/
@@ -33,6 +42,10 @@ nav a {
 }
 
 /*the main viewpoint*/
+main {
+    background-color: rgb(15, 6, 87);
+}
+
 .environment-container {
     text-align: center;
     padding: 50px;
@@ -64,8 +77,83 @@ nav a {
     z-index: 2;  
 }
 
-main {
-    background-color: rgb(15, 6, 87);
+#father {
+    position: absolute;
+    top: 200px;
+    left: 590px;
+    width: 300px;
+    z-index: 2;  
+}
+
+#light {
+    position: absolute;
+    top: 35px;
+    left: 650px;
+    width: 130px;
+    z-index: 2;  
+}
+
+#closet1 {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 200px;
+    z-index: 2;  
+}
+#closet2 {
+    position: absolute;
+    top: 300px;
+    left: 450px;
+    width: 200px;
+    z-index: 2;  
+}
+
+#box {
+    position: absolute;
+    top: 430px;
+    left: 615px;
+    width: 100px;
+    z-index: 3;  
+}
+
+#chair1 {
+    position: absolute;
+    top: 400px;
+    left: 590px;
+    width: 150px;
+    z-index: 2;  
+}
+
+#chair2 {
+    position: absolute;
+    top: 400px;
+    left: 675px;
+    width: 150px;
+    z-index: 2;  
+}
+
+#chair3 {
+    position: absolute;
+    top: 400px;
+    left: 765px;
+    width: 150px;
+    z-index: 2;  
+}
+
+#chair4 {
+    position: absolute;
+    top: 400px;
+    left: 850px;
+    width: 150px;
+    z-index: 2;  
+}
+
+#chair5 {
+    position: absolute;
+    top: 400px;
+    left: 935px;
+    width: 150px;
+    z-index: 2;  
 }
 
 /*hint area*/
