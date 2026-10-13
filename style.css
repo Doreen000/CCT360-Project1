@@ -177,3 +177,12 @@ main {
 footer {
     background-color: rgb(15, 6, 87);
 }
+
+/*Scene 1*/
+.hotspot {
+    position: absolute;
+    top: 180px;
+    left: 850px;
+    width: 90px;
+    height: 230px; 
+}

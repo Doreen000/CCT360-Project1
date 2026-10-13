@@ -20,13 +20,14 @@
     </nav>
     <main>
         <div class="environment-container">
-            <img id="bedroom-background" class="background-image" src="bedroom.jpg" alt="Bedroom background">
-            <img id="portrait" class="items" src="portrait.png" alt="portrait">
-            <img id="desk" class="items" src="table.PNG" alt="desk">
+            <img id="bedroom-background" class="background-image" onclick="inspectObject('background')" src="bedroom.jpg" alt="Bedroom background">
+            <img id="portrait" class="items" onclick="inspectObject('portrait')" src="portrait.png" alt="portrait">
+            <img id="desk" class="items" onclick="inspectObject('desk')" src="table.PNG" alt="desk">
+            <div id="door" class="hotspot" onclick="inspectObject('door')"></div>   
         </div>
         <article class="hint-area">
             <h2>Me</h2>
-            <p class="speaking">“What happened...? Why am I here when I just woke up...? <br>Was I kidnapped...? I need to find a way out.”</p>
+            <p class="speaking" id="hint-text">“What happened...? Why am I here when I just woke up...? <br>Was I kidnapped...? I need to find a way out.”</p>
         </article>
     </main>
     <footer>
