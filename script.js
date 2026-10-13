@@ -64,10 +64,10 @@ function goTo(page, delay) {
 
 // Scene 1
 const objectHints = {
-    portrait: "“Is the person in that portrait the owner of this room...? Could he be the one who kidnapped me?”",
+    portrait: "“Is this his room...? Could he be the one who kidnapped me?”",
     desk: "“It's locked.”",
     door: "“Wait... I should figure out where I am before I go out there.”",
-    background:"“Why are there barely any everyday items in this room...?”"
+    background:"“Why doesn't he have any stuff...?”"
 };
 
 // The door only opens once the player has looked at all three
@@ -108,7 +108,7 @@ function chooseDoor(side) {
     if (leavingScene) return; // already walking through the other door
 
     if (side === 'left') {
-        say("“Stairs going down... Maybe this is the way out.”");
+        say("“Stairs... Maybe this is the way out.”");
         unlockScene(3);
         goTo('scene3.html', 1500);
     } else {
@@ -131,7 +131,7 @@ function readNote() {
 
 function fatherAppears() {
     document.getElementById('father').classList.add('visible');
-    say("“Why are you out here? I'm taking you back.”", 'The man');
+    say("“You shouldn't be out! I'm taking you back.”", 'The man');
     setTimeout(function () {
         document.getElementById('game-over').hidden = false;
     }, 5000); // 3s ghost entrance + time to read his line
