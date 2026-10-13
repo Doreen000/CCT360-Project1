@@ -67,7 +67,8 @@ const objectHints = {
     portrait: "“Is this his room...? Could he be the one who kidnapped me?”",
     desk: "“It's locked.”",
     door: "“Wait... I should figure out where I am before I go out there.”",
-    background:"“Why doesn't he have any stuff...?”"
+    background:"“Why doesn't he have any stuff...?”",
+    drawer: "The drawer unlocks, and you open it."
 };
 
 // The door only opens once the player has looked at all three
