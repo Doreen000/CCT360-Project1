@@ -7,20 +7,36 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">  
     <body data-scene="4">
-        <header>
-            <h1>
-                <a href="index.html">Scene1</a>
-            </h1>
-        </header>
-        <nav>
+      <header>
+        <h1>The Curious Case</h1>
+    </header>
+    <nav>
+        <a href="index.html" data-scene="1">Scene 1</a>
+        <a href="scene2.html" data-scene="2">Scene 2</a>
+        <a href="scene3.html" data-scene="3">Scene 3</a>
+    </nav>
+    <main>
+       
+       
+     <div class="environment-container">
+        <div class="scene-frame">
+            <img id="bedroom-background" class="background-image" src="bedroom.jpg" alt="Bedroom background">
+            <img id="portrait2" class="items" src="portrait.png" alt="portrait">
+            <img id="desk2" class="items" onclick="inspectObject('drawer')" src="table.PNG" alt="desk">
+            <div id="inventory">
+                    <img src="key.png" alt="key">
+                </div>
+        </div>
+     </div>
+        <article class="hint-area">
+            <h2 id="speaker">Me</h2>
+            <p class="speaking" id="hint-text">“It can't be... what happened to me? Maybe I can use the key to unlock the drawer for some answers..”</p>
+        </article> 
 
-        </nav>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
+    </main>
+    <footer>
+        <br>
+    </footer>
     <script src="script.js"></script>
     </body>
 </html>
