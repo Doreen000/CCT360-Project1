@@ -1,41 +1,86 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Scene3</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">  
-    <body>
+        <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
+    </head>
+    <body data-scene="3">
         <header>
         <h1>The Curious Case</h1>
     </header>
     <nav>
-        <a href="index.html">Scene 1</a>
-        <a href="scene2.html">Scene 2</a>
-        <a href="scene3.html">Scene 3</a>
+        <a href="index.html" data-scene="1">Scene 1</a>
+        <a href="scene2.html" data-scene="2">Scene 2</a>
+        <a href="scene3.html" data-scene="3">Scene 3</a>
     </nav>
     <main>
         <div class="environment-container">
-            <img id="livingroom-background" class="background-image" src="living room .jpg" alt="Livingroom background">
-            <img id="light" class="items" src="light.png" alt="light">
-            <img id="closet1" class="items" src="closet.PNG" alt="closet1">
-            <img id="closet2" class="items" src="closet.PNG" alt="closet2">
-            <img id="box" class="items" src="box_close.PNG" alt="box">
-            <img id="chair1" class="items" src="chair.PNG" alt="chair1">
-            <img id="chair2" class="items" src="chair.PNG" alt="chair2">
-            <img id="chair3" class="items" src="chair.PNG" alt="chair3">
-            <img id="chair4" class="items" src="chair.PNG" alt="chair4">
-            <img id="chair5" class="items" src="chair.PNG" alt="chair5">
+            <div class="scene-frame">
+                <img id="livingroom-background" class="background-image" src="living room .jpg" alt="Livingroom background">
+                <img id="light" class="items" src="light.png" alt="light">
+                <img id="closet1" class="items" src="closet.PNG" alt="closet1">
+                <img id="closet2" class="items" src="closet.PNG" alt="closet2">
+                <img id="chair1" class="items" src="chair.PNG" alt="chair1">
+                <img id="chair2" class="items" src="chair.PNG" alt="chair2">
+                <img id="chair3" class="items" src="chair.PNG" alt="chair3">
+                <img id="chair4" class="items" src="chair.PNG" alt="chair4">
+                <img id="chair5" class="items" src="chair.PNG" alt="chair5">
+                <img id="box" class="items" onclick="inspectBox()" src="box_close.PNG" alt="box">
+                <div id="exit-door" onclick="tryExitDoor()" title="Door"></div>
+                <div id="inventory" hidden>
+                    <img src="key.png" alt="key">
+                </div>
+            </div>
         </div>
         <article class="hint-area">
-            <h2>Me</h2>
-            <p class="speaking">“That door must be the exit.”</p>
+            <h2 id="speaker">Me</h2>
+            <p class="speaking" id="hint-text">“That door must be the exit.”</p>
         </article>
     </main>
     <footer>
         <br>
     </footer>
+
+    <!-- password lock on the box -->
+    <div id="keypad" class="overlay" hidden>
+        <p>“It needs a four-digit password...”</p>
+        <div id="keypad-display" class="keypad-display">____</div>
+        <div class="keypad-keys">
+            <button onclick="pressKey('1')">1</button>
+            <button onclick="pressKey('2')">2</button>
+            <button onclick="pressKey('3')">3</button>
+            <button onclick="pressKey('4')">4</button>
+            <button onclick="pressKey('5')">5</button>
+            <button onclick="pressKey('6')">6</button>
+            <button onclick="pressKey('7')">7</button>
+            <button onclick="pressKey('8')">8</button>
+            <button onclick="pressKey('9')">9</button>
+            <button onclick="clearCode()">C</button>
+            <button onclick="pressKey('0')">0</button>
+            <button onclick="deleteKey()">&larr;</button>
+        </div>
+        <p id="keypad-message" class="keypad-message"></p>
+        <button onclick="closeKeypad()">Step back</button>
+    </div>
+
+    <!-- what's inside the box: the mirror (twist) and the key -->
+    <div id="mirror-view" class="overlay" hidden onclick="nextMirrorLine()">
+        <div class="box-contents">
+            <div class="mirror-stack">
+                <img id="mirror-plain" class="reflection" src="mirror.png" alt="mirror">
+                <img id="reflection-white" class="reflection" src="reflection_white.png" alt="your reflection">
+                <img id="reflection-red" class="reflection" src="reflection_red.png" alt="the face from the portrait">
+            </div>
+            <img id="box-key" src="key.png" alt="key">
+        </div>
+        <p id="mirror-text" class="speaking"></p>
+        <p class="continue-hint">(click to continue)</p>
+    </div>
     <script src="script.js"></script>
     </body>
 </html>

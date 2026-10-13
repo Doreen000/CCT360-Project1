@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Office</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">  
-    <body>
+        <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
+    </head>
+    <body data-scene="2">
         <header>
-            <h1>
-                <a href="index.html">Scene1</a>
-            </h1>
+            <h1>The Curious Case</h1>
         </header>
         <nav>
-
+            <a href="index.html" data-scene="1">Scene 1</a>
+            <a href="scene2.html" data-scene="2">Scene 2</a>
+            <a href="scene3.html" data-scene="3">Scene 3</a>
         </nav>
         <main>
         <div class="environment-container">
-            <img id="office-background" class="background-image" src="office.png" alt="Office background">
-            <img id="father" class="items" src="father.png" alt="A mysterious man">
+            <div class="scene-frame">
+                <img id="office-background" class="background-image" src="office.png" alt="Office background">
+                <div id="note" onclick="readNote()" title="A note"></div>
+                <img id="father" src="father.png" alt="A mysterious man">
+            </div>
         </div>
         <article class="hint-area">
-            <h2>You enter a man's study.</h2>
-            <p class="speaking">The man: “Why are you out here? I’m taking you back.”</p>
+            <h2 id="speaker">Me</h2>
+            <p class="speaking" id="hint-text">“Someone's study... Whoever lives here must work in this room.”<br>“There's a note on the desk.”</p>
         </article>
     </main>
     <footer>
         <br>
     </footer>
+    <div id="game-over" class="overlay game-over" hidden>
+        <h2>Game Over</h2>
+        <p>The man took you back to the bedroom.</p>
+        <button onclick="playAgain()">Play again</button>
+    </div>
     <script src="script.js"></script>
     </body>
 </html>

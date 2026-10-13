@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">  
 </head>
-<body>
+<body data-scene="1">
     <header>
         <h1>The Curious Case</h1>
     </header>
     <nav>
-        <a href="index.html">Scene 1</a>
-        <a href="scene2.html">Scene 2</a>
-        <a href="scene3.html">Scene 3</a>
+        <a href="index.html" data-scene="1">Scene 1</a>
+        <a href="scene2.html" data-scene="2">Scene 2</a>
+        <a href="scene3.html" data-scene="3">Scene 3</a>
     </nav>
     <main>
         <div class="environment-container">
@@ -26,7 +26,7 @@
             <div id="door" class="hotspot" onclick="inspectObject('door')"></div>   
         </div>
         <article class="hint-area">
-            <h2>Me</h2>
+            <h2 id="speaker">Me</h2>
             <p class="speaking" id="hint-text">“What happened...? Why am I here when I just woke up...? <br>Was I kidnapped...? I need to find a way out.”</p>
         </article>
     </main>
