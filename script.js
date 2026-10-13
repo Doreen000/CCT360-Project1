@@ -288,3 +288,8 @@ function tryExitDoor() {
     unlockScene(4);
     goTo('scene4.html', 2000);
 }
+
+function viewEndImages() {
+    document.getElementByID('journal').hidden = false;
+    document.getElementByID('familyphoto').hidden = false;
+}
