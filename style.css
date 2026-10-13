@@ -41,6 +41,12 @@ nav a {
     color: white;
 }
 
+/*scenes the player hasn't reached yet*/
+nav a.locked {
+    color: rgb(90, 90, 90);
+    cursor: not-allowed;
+}
+
 /*the main viewpoint*/
 main {
     background-color: rgb(15, 6, 87);
@@ -77,82 +83,75 @@ main {
     z-index: 2;  
 }
 
-#father {
-    position: absolute;
-    top: 200px;
-    left: 590px;
-    width: 300px;
-    z-index: 2;  
-}
 
 #light {
     position: absolute;
-    top: 35px;
-    left: 650px;
-    width: 130px;
+    top: -2.79%;
+    left: 42.29%;
+    width: 16.17%;
     z-index: 2;  
 }
 
 #closet1 {
     position: absolute;
-    top: 300px;
-    left: 300px;
-    width: 200px;
+    top: 46.54%;
+    left: -1.24%;
+    width: 24.88%;
     z-index: 2;  
 }
 #closet2 {
     position: absolute;
-    top: 300px;
-    left: 450px;
-    width: 200px;
+    top: 46.54%;
+    left: 17.41%;
+    width: 24.88%;
     z-index: 2;  
 }
 
 #box {
     position: absolute;
-    top: 430px;
-    left: 615px;
-    width: 100px;
+    top: 70.74%;
+    left: 37.94%;
+    width: 12.44%;
     z-index: 3;  
 }
 
 #chair1 {
     position: absolute;
-    top: 400px;
-    left: 590px;
-    width: 150px;
+    top: 65.15%;
+    left: 34.83%;
+    width: 18.66%;
     z-index: 2;  
 }
 
 #chair2 {
     position: absolute;
-    top: 400px;
-    left: 675px;
-    width: 150px;
+    top: 65.15%;
+    left: 45.40%;
+    width: 18.66%;
     z-index: 2;  
 }
 
 #chair3 {
     position: absolute;
-    top: 400px;
-    left: 765px;
-    width: 150px;
+    top: 65.15%;
+    left: 56.59%;
+    width: 18.66%;
     z-index: 2;  
 }
 
 #chair4 {
     position: absolute;
-    top: 400px;
-    left: 850px;
-    width: 150px;
+    top: 65.15%;
+    left: 67.16%;
+    width: 18.66%;
     z-index: 2;  
 }
 
 #chair5 {
     position: absolute;
-    top: 400px;
-    left: 935px;
-    width: 150px;
+    top: 65.15%;
+    left: 77.74%;
+    width: 18.66%;
     z-index: 2;  
 }
 
@@ -186,3 +185,251 @@ footer {
     width: 90px;
     height: 230px; 
 }
+
+/*shared by scenes 2 and office: keeps clickable spots lined up with the picture at any window width*/
+.scene-frame {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/*fade to black between scenes*/
+.fade-screen {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s;
+    z-index: 100;
+}
+
+.fade-screen.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Scene 2*/
+.door-choice {
+    position: absolute;
+    top: 10%;
+    width: 25%;
+    height: 77%;
+    cursor: pointer;
+    z-index: 2;
+    transition: box-shadow 0.3s;
+}
+
+.door-choice:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+#left-door {
+    left: 14%;
+}
+
+#right-door {
+    left: 61.5%;
+}
+
+/*Scene office*/
+#note {
+    position: absolute;
+    top: 59.5%;
+    left: 36%;
+    width: 6%;
+    height: 2.6%;
+    background-color: rgb(240, 232, 210);
+    transform: rotate(-6deg);
+    cursor: pointer;
+    z-index: 2;
+    animation: note-glow 2s ease-in-out infinite;
+}
+
+@keyframes note-glow {
+    0%, 100% { box-shadow: 0 0 4px rgba(255, 240, 200, 0.3); }
+    50% { box-shadow: 0 0 14px rgba(255, 240, 200, 0.9); }
+}
+
+#father {
+    position: absolute;
+    bottom: 2%;
+    left: 62%;
+    width: 28%;
+    opacity: 0;
+    transform: scale(0.1);
+    filter: drop-shadow(0 0 4px white);
+    transition: opacity 3s ease-in, transform 3s ease-out;
+    z-index: 3;
+}
+
+/*ghost-like entrance: grows from small to full size while fading in*/
+#father.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*pop-up screens (game over, password lock, mirror)*/
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 50;
+}
+
+.overlay[hidden] {
+    display: none;
+}
+
+.overlay button {
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    border: 2px solid gray;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    border-color: white;
+}
+
+.game-over h2 {
+    font-size: 4rem;
+    color: rgb(180, 30, 30);
+    margin: 0;
+}
+
+/*Scene 3*/
+#exit-door {
+    position: absolute;
+    top: 21%;
+    left: 72.8%;
+    width: 18.9%;
+    height: 74.5%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#box {
+    cursor: pointer;
+}
+
+#inventory {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    width: 7%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid gray;
+    border-radius: 10px;
+    z-index: 4;
+}
+
+#inventory img {
+    width: 100%;
+    display: block;
+}
+
+.keypad-display {
+    font-size: 3rem;
+    letter-spacing: 0.4em;
+    padding: 5px 10px 5px 30px;
+    background-color: rgb(20, 20, 20);
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.keypad-keys {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    gap: 10px;
+    margin: 20px;
+}
+
+.overlay .keypad-keys button {
+    height: 70px;
+    padding: 0;
+    font-size: 2rem;
+    border-radius: 12px;
+}
+
+.keypad-message {
+    min-height: 2.5em;
+    margin: 0;
+    color: rgb(220, 120, 120);
+}
+
+.shake {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.overlay#mirror-view {
+    cursor: pointer;
+}
+
+.box-contents {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/*the three mirror pictures sit on top of each other and crossfade*/
+.mirror-stack {
+    position: relative;
+    height: 55vh;
+    aspect-ratio: 3 / 4;
+}
+
+.reflection {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.reflection.visible {
+    opacity: 1;
+}
+
+/*slow fade for the twist so the player sees the face change*/
+#reflection-red {
+    transition: opacity 3s;
+}
+
+#box-key {
+    height: 35vh;
+    transition: opacity 1s, transform 1s;
+}
+
+#box-key.taken {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.continue-hint {
+    font-size: 1rem;
+    color: gray;
+}
+
+/*DEBUG: outlines everything clickable. Uncomment while lining up scene 1's clickable items*/
+/*
+[onclick] {
+    outline: 2px solid white;
+}
+*/
