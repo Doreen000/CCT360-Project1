@@ -68,7 +68,7 @@ const objectHints = {
     desk: "“It's locked.”",
     door: "“Wait... I should figure out where I am before I go out there.”",
     background:"“Why doesn't he have any stuff...?”",
-    drawer: "The drawer unlocks, and you open it."
+    drawer: "The drawer unlocks, and you find a family photo along with your diary. You finally remember the last thing you wrote to your father. You saw the toll your illness took on your family, and on your memory. You tried to end their suffering, your suffering. It didn't work, but now maybe you think that that is for the better."
 };
 
 // The door only opens once the player has looked at all three
