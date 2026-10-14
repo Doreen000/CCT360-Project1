@@ -289,6 +289,6 @@ function tryExitDoor() {
     goTo('scene4.html', 2000);
 }
 
-function viewEndImages() {
+function viewEndImage() {
     document.getElementById('familyphoto').hidden = false;
 }
