@@ -445,12 +445,16 @@ footer {
 
 
 #endImages {
-  position: absolute;
-  width: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   opacity: 1;
   z-index: 10;
-  top: 50%;
-  left: 50%;
+  display: block;
+  object-fit: contain;
 }
 
 /*DEBUG: outlines everything clickable. Uncomment while lining up scene 1's clickable items*/
