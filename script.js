@@ -68,7 +68,7 @@ const objectHints = {
     desk: "“It's locked.”",
     door: "“Wait... I should figure out where I am before I go out there.”",
     background:"“Why doesn't he have any stuff...?”",
-    drawer: "My diary?"
+    drawer: "“My diary?“"
 };
 
 // The door only opens once the player has looked at all three
