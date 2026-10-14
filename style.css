@@ -443,16 +443,8 @@ footer {
     z-index: 2;  
 }
 
-#journal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  opacity: 1;
-  z-index: 10;
-}
 
-#familyphoto {
+#familyphoto, #journal {
   position: relative;
   display: inline-block;
   width: 150px;
