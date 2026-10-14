@@ -445,7 +445,7 @@ footer {
 
 
 #familyphoto, #journal {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 150px;
   opacity: 1;
