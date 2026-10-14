@@ -68,7 +68,7 @@ const objectHints = {
     desk: "“It's locked.”",
     door: "“Wait... I should figure out where I am before I go out there.”",
     background:"“Why doesn't he have any stuff...?”",
-    drawer: "“My diary?“"
+    drawer: "“My diary?<br>October 1, 2025... I've got so much more gray hair.<br>November 18, 2025... Mom and Dad were shocked by how quickly my hair was turning gray, so they took me to see a doctor.<br>December 15, 2025... The doctor said I have a rare disease that will gradually make me lose my memories, until I eventually forget who I am. Oh God, how could this happen to me?<br>December 20, 2025... I tried to take my own life. After my parents found out, they cleared my room of anything I could use to hurt myself.<br>December 31, 2025... I mistook my younger siblings for strangers who had appeared in our home. I attacked them. Now my parents are terrified of letting me out of my room.<br>January 1, 2026... ...<br>February 1, 2026... ...<br>March 1, 2026... ...<br>...Looks like I've forgotten who I am all over again.“"
 };
 
 // The door only opens once the player has looked at all three
@@ -298,27 +298,3 @@ function showEndImage() {
     }
     el.hidden = false;
 }
-
-const diaryEntries = [
-    "October 1, 2025... I've got so much more white hair.",
-    "November 18, 2025... Mom and Dad were shocked by how quickly my hair was turning white, so they took me to see a doctor.",
-    "December 15, 2025... The doctor said I have a rare disease that will gradually make me lose my memories, until I eventually forget who I am. Oh God, how could this happen to me?",
-    "December 20, 2025... I tried to take my own life. After my parents found out, they cleared my room of anything I could use to hurt myself.",
-    "December 31, 2025... I mistook my younger siblings for strangers who had appeared in our home. I attacked them. Now my parents are terrified of letting me out of my room.",
-    "January 1, 2026... ...",
-    "February 1, 2026... ...",
-    "March 1, 2026... ... \nLooks like I've forgotten who I am all over again."
-];
-
-let currentIndex = 0;
-
-function nextDiaryPage() {
-    const hintText = document.getElementById("hint-text");
-    if (currentIndex < diaryEntries.length - 1) {
-        currentIndex++;
-        hintText.innerText = diaryEntries[currentIndex];
-    } else {
-        hintText.innerText = "The diary ends here... Or does it?";
-    }
-}
-
