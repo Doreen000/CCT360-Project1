@@ -290,6 +290,5 @@ function tryExitDoor() {
 }
 
 function viewEndImages() {
-    document.getElementById('journal').hidden = false;
     document.getElementById('familyphoto').hidden = false;
 }
