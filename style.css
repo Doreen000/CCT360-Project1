@@ -446,10 +446,11 @@ footer {
 
 #familyphoto {
   position: absolute;
-  display: inline-block;
-  width: 150px;
+  width: 300px;
   opacity: 1;
   z-index: 10;
+  top: 50%;
+  left: 50%;
 }
 
 /*DEBUG: outlines everything clickable. Uncomment while lining up scene 1's clickable items*/
